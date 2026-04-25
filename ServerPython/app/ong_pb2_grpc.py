@@ -3,7 +3,7 @@
 import grpc
 import warnings
 
-from . import ong_pb2 as ong__pb2
+import ong_pb2 as ong__pb2
 
 GRPC_GENERATED_VERSION = '1.75.1'
 GRPC_VERSION = grpc.__version__
