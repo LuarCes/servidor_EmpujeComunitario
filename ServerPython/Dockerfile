@@ -7,9 +7,6 @@ RUN apt-get update && apt-get install -y protobuf-compiler && rm -rf /var/lib/ap
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY ong.proto .
-RUN python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. ong.proto
-
 COPY . .
 
 EXPOSE 50051
