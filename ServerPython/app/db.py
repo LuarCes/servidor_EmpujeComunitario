@@ -43,6 +43,7 @@ def get_conn():
         autocommit=False,
         cursorclass=DictCursor,
         charset="utf8mb4",
+        ssl={"ca": "/etc/ssl/certs/ca-certificates.crt"}
     )
     print(f'[DB] Conectado a MySQL {cfg["host"]}:{cfg["port"]}/{cfg["database"]}')
     return conn
